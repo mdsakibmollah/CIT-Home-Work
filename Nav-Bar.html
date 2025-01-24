@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nav Bar</title>
+  <link rel="stylesheet" href="CSS/Nav-Bar.css">
+  <style>
+    *{
+  margin:0;
+  padding:0;
+  font-family: monospace;
+  
+}
+
+.main .main-ul{
+  display:flex;
+}
+
+img{
+  margin-top: 10px;
+  height: 100%;
+  width:100%
+}
+
+a{
+  color:white;
+  text-decoration: none;
+  font-size: 30px;
+  position: relative;
+  
+  
+}
+ul{
+  list-style-type: none;
+  background-color: rgb(48, 45, 45);
+}
+
+ul li{
+  
+  padding:10px;
+}
+
+ul li:hover{
+  background-color: black;
+  color:white;
+  border-radius: 5px;
+}
+
+.main ul .drop-down{
+  position: relative;
+}
+.main ul .drop-down .inner {
+  
+  position: absolute;
+  top:56px;
+  left:0px;
+  opacity: 0;
+  width:360px;
+}
+
+.main ul .drop-down:hover .inner {
+  opacity: 1;
+  
+}
+
+a::after{
+position:absolute;
+content: '';
+width: 0;
+height:3px;
+background-color: white;
+left: 0;
+bottom:0;
+transition: all linear .3s;
+}
+a:hover::after{
+  width: 100%;
+}
+
+
+.main-ul .drop-down .inner .parent-1{
+  position: relative;
+}
+.main-ul .drop-down .inner .parent-1 .drop-down-2  {
+  
+  position: absolute;
+  top:0px;
+  left:360px;
+  opacity: 0;
+  width:460px;
+  
+}
+
+.main-ul .drop-down .inner .parent-1:hover .drop-down-2{
+  opacity: 1;
+  
+} 
+
+.main-ul .drop-down .inner .parent-1 .drop-down-2 .parent-2{
+  position: relative;
+}
+
+.main-ul .drop-down .inner .parent-1 .drop-down-2 .parent-2 .drop-down-3{
+  position: absolute;
+  left:460px;
+  top:0px;
+  width:300px;
+  opacity: 0;
+}
+
+.main-ul .drop-down .inner .parent-1 .drop-down-2 .parent-2:hover .drop-down-3{
+  opacity: 1;
+}
+
+.main-ul .drop-down .inner .parent-1 .drop-down-2 .parent-2 .drop-down-3 .parent-3{
+  position: relative;
+}
+.main-ul .drop-down .inner .parent-1 .drop-down-2 .parent-2 .drop-down-3 .parent-3 .drop-down-4{
+  position: absolute;
+  left:300px;
+  top:0px;
+  width:400px;
+  opacity: 0;
+}
+
+.main-ul .drop-down .inner .parent-1 .drop-down-2 .parent-2 .drop-down-3 .parent-3:hover .drop-down-4{
+  opacity: 1;
+}
+  </style>
+</head>
+<body>
+
+  <!-- <div class="Virticul-Nab">
+    <ul>
+      <li> <a href="#">Home</a> </li>
+      <li> <a href="#">Course</a> </li>
+      <li> <a href="#">About Us</a> </li>
+      <li> <a href="#">Contact Us</a> </li>
+    </ul>
+  </div> -->
+
+    <!-- <div class="Horizental-Nab">
+      <ul>
+        <li> <a href="#">Home</a></li>
+        <li> <a href="#">Contact</a></li>
+        <li> <a href="#">About</a></li>
+      </ul>
+    </div> -->
+
+    <!-- .......Drop-Down Menu..... -->
+
+    <div class="main">
+      
+      <ul class="main-ul">
+        <li><a href="#">Home</a></li>
+        <li class="drop-down"><a href="#">Course</a>
+          
+            <ul class="inner">
+              <li><a href="#">Graphic Design</a></li>
+              <li><a href="#">Digital Marketing</a></li>
+              <li><a href="#">Cyber Security</a></li>
+              <li class="parent-1"><a href="#">Web Development</a>
+                <ul class="drop-down-2">
+                  <li> <a href="#">MERN Stack Development</a></li>
+                  <li> <a href="#">Full Stack Development</a></li>
+                  <li class="parent-2"> <a href="#">Front-End Development</a>
+                    <ul class="drop-down-3">
+                      <li><a href="#">FDR 2400</a></li>
+                      <li><a href="#">FDR 2401</a></li>
+                      <li><a href="#">FDR 2402</a></li>
+                      <li><a href="#">FDR 2403</a></li>
+                      <li class="parent-3" ><a href="#">FDR 2404</a>
+                        <ul class="drop-down-4">
+                          <li><a href="#">Mohiuddin Sir</a></li>
+                          <li><a href="#">Susmita Hawlader</a></li>
+                          <li><a href="#">Misrat Jahan Simi</a></li>
+                          <li><a href="#">Bikis Ara Anni</a></li>
+                          <li><a href="#">Nupur Akter</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">FDR 2405</a></li>
+                      <li><a href="#">FDR 2406</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">3D Animation</a></li>
+            </ul>
+        </li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <img src="images/CIT.jpg">
+</body>
+</html>
